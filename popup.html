@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-container">
+        <img src="images/icon-128.png" alt="" />
+        <h1>Looper</h1>
+      </div>
+
+      <div class="content-container">
+        <h2>Add your urls here:</h2>
+        <textarea
+          id="urls"
+          rows="6"
+          placeholder="https://pickinfo.se"
+        ></textarea>
+
+        <div>
+          <button id="copy" class="btn btn--secondary">Copy</button>
+          <button id="download" class="btn btn--primary">Download</button>
+        </div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
