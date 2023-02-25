@@ -1,0 +1,67 @@
+{
+  "name": "Looper",
+  "description": "Looper is a Chrome extension that allows you to create a slideshow of your favorite URLs.",
+  "version": "0.0.0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Looper | Create a slideshow of your favorite URLs",
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-64.png",
+      "128": "images/icon-128.png"
+    }
+  },
+  "permissions": ["storage", "tabs", "scripting"],
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-64.png",
+    "128": "images/icon-128.png"
+  },
+  "commands": {
+    "next-url": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Right",
+        "mac": "Command+Right"
+      },
+      "description": "goto next url"
+    },
+    "prev-url": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Left",
+        "mac": "Command+Left"
+      },
+      "description": "goto previous url"
+    },
+    "remove-url": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Down",
+        "mac": "Command+Down"
+      },
+      "description": "remove current url"
+    },
+    "export-urls": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Up",
+        "mac": "Command+Up"
+      },
+      "description": "export current urls"
+    }
+  },
+  "host_permissions": ["*://*/*"],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/clickme.gif"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
+    }
+  ]
+}
